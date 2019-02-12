@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace MastermindProgrammingChallenge
 {
-    public partial class Form1 : Form
+    public partial class MasterMindMainForm : Form
     {
-        public Form1()
+ 
+
+
+        public MasterMindMainForm()
         {
             InitializeComponent();
         }
