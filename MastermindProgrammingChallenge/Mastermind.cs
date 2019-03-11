@@ -103,14 +103,7 @@ namespace MastermindProgrammingChallenge
         public int CountHits(int[] PCArray, int[] userArray)
         {
             int hits = 0;
-
-            for (int i = 0; i < PCArray.Length; i++)
-            {
-                if(PCArray[i] == userArray[i])
-                {
-                    hits++;
-                }
-            }
+            for (int i = 0; i < PCArray.Length; i++) if(PCArray[i] == userArray[i]) hits++;
             return hits;
         }
         
