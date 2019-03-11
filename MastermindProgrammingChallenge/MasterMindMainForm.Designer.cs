@@ -33,7 +33,9 @@
             this.colourButton3 = new System.Windows.Forms.Button();
             this.colourButton2 = new System.Windows.Forms.Button();
             this.colourButton1 = new System.Windows.Forms.Button();
-            this.informUserGuess = new System.Windows.Forms.Label();
+            this.lblGuess = new System.Windows.Forms.Label();
+            this.lblPlayer = new System.Windows.Forms.Label();
+            this.lblHits = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@
             this.groupBox1.Controls.Add(this.colourButton3);
             this.groupBox1.Controls.Add(this.colourButton2);
             this.groupBox1.Controls.Add(this.colourButton1);
-            this.groupBox1.Location = new System.Drawing.Point(14, 23);
+            this.groupBox1.Location = new System.Drawing.Point(14, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(589, 319);
             this.groupBox1.TabIndex = 0;
@@ -86,22 +88,44 @@
             this.colourButton1.Text = "colourButton1";
             this.colourButton1.UseVisualStyleBackColor = true;
             // 
-            // informUserGuess
+            // lblGuess
             // 
-            this.informUserGuess.AutoSize = true;
-            this.informUserGuess.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.informUserGuess.Location = new System.Drawing.Point(13, 345);
-            this.informUserGuess.Name = "informUserGuess";
-            this.informUserGuess.Size = new System.Drawing.Size(176, 37);
-            this.informUserGuess.TabIndex = 1;
-            this.informUserGuess.Text = "Guess : {0}";
+            this.lblGuess.AutoSize = true;
+            this.lblGuess.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGuess.Location = new System.Drawing.Point(426, 386);
+            this.lblGuess.Name = "lblGuess";
+            this.lblGuess.Size = new System.Drawing.Size(172, 37);
+            this.lblGuess.TabIndex = 1;
+            this.lblGuess.Text = "Guess : [0]";
+            // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblPlayer.Location = new System.Drawing.Point(12, 9);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(228, 37);
+            this.lblPlayer.TabIndex = 2;
+            this.lblPlayer.Text = "Player : Name ";
+            // 
+            // lblHits
+            // 
+            this.lblHits.AutoSize = true;
+            this.lblHits.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHits.Location = new System.Drawing.Point(463, 440);
+            this.lblHits.Name = "lblHits";
+            this.lblHits.Size = new System.Drawing.Size(135, 37);
+            this.lblHits.TabIndex = 3;
+            this.lblHits.Text = "Hits : [0]";
             // 
             // MasterMindMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 625);
-            this.Controls.Add(this.informUserGuess);
+            this.ClientSize = new System.Drawing.Size(627, 513);
+            this.Controls.Add(this.lblHits);
+            this.Controls.Add(this.lblPlayer);
+            this.Controls.Add(this.lblGuess);
             this.Controls.Add(this.groupBox1);
             this.Name = "MasterMindMainForm";
             this.Text = "Mastermind";
@@ -118,7 +142,9 @@
         private System.Windows.Forms.Button colourButton3;
         private System.Windows.Forms.Button colourButton2;
         private System.Windows.Forms.Button colourButton1;
-        private System.Windows.Forms.Label informUserGuess;
+        private System.Windows.Forms.Label lblGuess;
+        private System.Windows.Forms.Label lblPlayer;
+        private System.Windows.Forms.Label lblHits;
     }
 }
 

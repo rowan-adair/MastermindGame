@@ -46,7 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MasterMindLogic.cs" />
+    <Compile Include="StartMastermind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartMastermind.Designer.cs">
+      <DependentUpon>StartMastermind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mastermind.cs" />
+    <Compile Include="MasterMindLogicTester.cs" />
     <Compile Include="MasterMindMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +62,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="StartMastermind.resx">
+      <DependentUpon>StartMastermind.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterMindMainForm.resx">
       <DependentUpon>MasterMindMainForm.cs</DependentUpon>
     </EmbeddedResource>
