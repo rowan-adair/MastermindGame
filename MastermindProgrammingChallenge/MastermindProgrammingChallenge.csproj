@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Guess.cs" />
+    <Compile Include="MasterMindLogic.cs" />
     <Compile Include="MasterMindMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
