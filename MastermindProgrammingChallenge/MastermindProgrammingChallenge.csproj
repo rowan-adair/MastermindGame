@@ -53,7 +53,6 @@
       <DependentUpon>StartMastermind.cs</DependentUpon>
     </Compile>
     <Compile Include="Mastermind.cs" />
-    <Compile Include="MasterMindLogicTester.cs" />
     <Compile Include="MasterMindMainForm.cs">
       <SubType>Form</SubType>
     </Compile>

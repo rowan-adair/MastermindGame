@@ -104,9 +104,9 @@
             this.lblPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblPlayer.Location = new System.Drawing.Point(12, 9);
             this.lblPlayer.Name = "lblPlayer";
-            this.lblPlayer.Size = new System.Drawing.Size(228, 37);
+            this.lblPlayer.Size = new System.Drawing.Size(133, 37);
             this.lblPlayer.TabIndex = 2;
-            this.lblPlayer.Text = "Player : Name ";
+            this.lblPlayer.Text = "Player : ";
             // 
             // lblHits
             // 

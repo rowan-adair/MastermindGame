@@ -16,5 +16,13 @@ namespace MastermindProgrammingChallenge
         {
             InitializeComponent();
         }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            string name = tbxName.Text;
+            MasterMindMainForm nextForm = new MasterMindMainForm(name);
+            nextForm.Show();
+            Hide();
+        }
     }
 }

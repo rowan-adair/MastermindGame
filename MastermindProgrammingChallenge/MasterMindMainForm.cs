@@ -12,10 +12,20 @@ namespace MastermindProgrammingChallenge
 {
     public partial class MasterMindMainForm : Form
     {
+        private string name;
 
-        public MasterMindMainForm()
+        public MasterMindMainForm(string name)
         {
+            this.name = name;
             InitializeComponent();
+            changeLabelsOnLoad();
         }
+
+        private void changeLabelsOnLoad()
+        {
+            lblPlayer.Text += name;
+        }
+        
+        
     }
 }

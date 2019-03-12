@@ -38,7 +38,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(12, 109);
+            this.label1.Location = new System.Drawing.Point(25, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 37);
             this.label1.TabIndex = 7;
@@ -47,19 +47,20 @@
             // tbxName
             // 
             this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.tbxName.Location = new System.Drawing.Point(115, 102);
+            this.tbxName.Location = new System.Drawing.Point(154, 88);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(413, 48);
             this.tbxName.TabIndex = 6;
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(351, 174);
+            this.btnEnter.Location = new System.Drawing.Point(390, 169);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(177, 54);
             this.btnEnter.TabIndex = 5;
             this.btnEnter.Text = "Submit";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // lblWelcome
             // 
@@ -71,17 +72,17 @@
             this.lblWelcome.TabIndex = 4;
             this.lblWelcome.Text = "Welcome to Mastermind";
             // 
-            // Form1
+            // StartMastermind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 261);
+            this.ClientSize = new System.Drawing.Size(594, 280);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.lblWelcome);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "StartMastermind";
+            this.Text = "Welcome";
             this.ResumeLayout(false);
             this.PerformLayout();
 

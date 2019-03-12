@@ -16,7 +16,7 @@ namespace MastermindProgrammingChallenge
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MasterMindMainForm());
+            Application.Run(new StartMastermind());
         }
 
 
