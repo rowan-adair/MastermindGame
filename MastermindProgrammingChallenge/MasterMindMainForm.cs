@@ -12,8 +12,6 @@ namespace MastermindProgrammingChallenge
 {
     public partial class MasterMindMainForm : Form
     {
- 
-
 
         public MasterMindMainForm()
         {
