@@ -12,7 +12,13 @@ namespace MastermindProgrammingChallenge
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[]args)
+        {
+            Console.WriteLine("Click here ...");
+            Console.ReadKey();
+        }
+
+        static void RunApp()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
