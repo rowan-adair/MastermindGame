@@ -1,3 +1,9 @@
 # Mastermind Programming Challenge
 
-Programming Challenge assigned by Dr. Richard Gault for Semester 2.
+Playing through the console.
+
+ - Run the application
+ - Enter your name
+ - Choose a difficulty
+ - Choose the number length (Between 1 and 4)
+ - Play
