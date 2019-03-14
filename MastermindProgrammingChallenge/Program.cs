@@ -14,8 +14,7 @@ namespace MastermindProgrammingChallenge
         [STAThread]
         static void Main(string[]args)
         {
-            Console.WriteLine("Click here ...");
-            Console.ReadKey();
+            RunConsole();
         }
 
         static void RunApp()
@@ -23,6 +22,18 @@ namespace MastermindProgrammingChallenge
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartMastermind());
+        }
+
+        static void RunConsole()
+        {
+            Console.WriteLine("************** Let's play Master-Mind **************\n");
+            string name = Mastermind.GetPlayerName();
+            do
+            {
+                Mastermind.PlayInConsole(name);
+                Console.Write("\nWould you like to play again (Y/N)? ");
+            }
+            while (Console.ReadLine().ToUpper() == "Y");
         }
 
 

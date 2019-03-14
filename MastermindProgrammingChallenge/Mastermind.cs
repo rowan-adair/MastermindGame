@@ -17,10 +17,41 @@ namespace MastermindProgrammingChallenge
             Console.WriteLine("Welcome {0}, have fun", name);
             return name;
         }
+        
+        public static void PlayInConsole(string name)
+        {
+            int numberCount = GetRandomNumber();
+            bool won = false;
+            Console.Write(numberCount + " it is. Let's play.\n");   
+            int[] PCArray = RandomNumberArrayGeneration(numberCount);
+            Console.WriteLine("A {0}-digit number has been chosen. Each possible digit may be the number 1 to 4.\n", numberCount);
+            int difficulty = GetDifficulty();          
+            for (int allowedAttempts = difficulty * numberCount; allowedAttempts > 0 && !won; allowedAttempts--)
+            {
+                Console.WriteLine("\nEnter your guess ({0} guesses remaining)", allowedAttempts);
 
+                int[] userArray = UserGuess(numberCount);
 
+                if(CountHits(PCArray,userArray) == numberCount)
+                {
+                    won = true;
+                }
+            }
+
+            if (won)
+                Console.WriteLine("You win, {0}!", name);
+            else
+                Console.WriteLine("Oh no, {0}! You couldn't guess the right number.", name);
+
+            Console.Write("The correct number is: ");
+            for (int j = 0; j < numberCount; j++)
+                Console.Write(PCArray[j] + " ");
+            Console.WriteLine();
+        }
+
+        
         // Still relies on console interaction, will build for user form.
-        public static int GetRandomNumber(int numCount)
+        public static int GetRandomNumber()
         {
             int number = 0;
             do
@@ -53,8 +84,6 @@ namespace MastermindProgrammingChallenge
             }
             Console.WriteLine();
             return randomNum;
-
-
         }
 
 
@@ -68,7 +97,7 @@ namespace MastermindProgrammingChallenge
                 Console.WriteLine("Digit {0}: ", i+1);
                 while (!int.TryParse(Console.ReadLine(), out n) || n < 1 || n > 4)
                 {
-                    Console.WriteLine("Inalid Number!");
+                    Console.WriteLine("Invalid Number!");
                 }
                 guess[i] = n;
             }
@@ -82,10 +111,10 @@ namespace MastermindProgrammingChallenge
         }
 
         // Gets chosen difficulty
-        public static int GetDifficulty(int difficulty)
+        public static int GetDifficulty()
         {
             int diffLevel = 0;
-            while (difficulty < 1 || difficulty > 3)
+            while (diffLevel < 1 || diffLevel > 3)
             {
                 try
                 {
@@ -100,7 +129,7 @@ namespace MastermindProgrammingChallenge
             return diffLevel;
         }
 
-        public int CountHits(int[] PCArray, int[] userArray)
+        public static int CountHits(int[] PCArray, int[] userArray)
         {
             int hits = 0;
             for (int i = 0; i < PCArray.Length; i++) if(PCArray[i] == userArray[i]) hits++;
