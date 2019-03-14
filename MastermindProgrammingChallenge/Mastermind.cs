@@ -20,12 +20,12 @@ namespace MastermindProgrammingChallenge
         
         public static void PlayInConsole(string name)
         {
+            int difficulty = GetDifficulty();
             int numberCount = GetRandomNumber();
             bool won = false;
             Console.Write(numberCount + " it is. Let's play.\n");   
             int[] PCArray = RandomNumberArrayGeneration(numberCount);
             Console.WriteLine("A {0}-digit number has been chosen. Each possible digit may be the number 1 to 4.\n", numberCount);
-            int difficulty = GetDifficulty();          
             for (int allowedAttempts = difficulty * numberCount; allowedAttempts > 0 && !won; allowedAttempts--)
             {
                 Console.WriteLine("\nEnter your guess ({0} guesses remaining)", allowedAttempts);
@@ -46,7 +46,6 @@ namespace MastermindProgrammingChallenge
             Console.Write("The correct number is: ");
             for (int j = 0; j < numberCount; j++)
                 Console.Write(PCArray[j] + " ");
-            Console.WriteLine();
         }
 
         
@@ -59,13 +58,12 @@ namespace MastermindProgrammingChallenge
                 try
                 {
                     number = int.Parse(Console.ReadLine());
-                    Console.WriteLine();
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("You must pick a number between 1 and 4, otherwise your choice is invalid.");
                 }
-            } while (number < 4 || number > 10);
+            } while (number > 4 || number < 1);
             return number;
         }
 
