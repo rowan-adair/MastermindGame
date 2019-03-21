@@ -116,7 +116,7 @@ namespace MastermindProgrammingChallenge
             {
                 try
                 {
-                    Console.WriteLine("Choose a difficulty level (1 = hard, 2 = medium, 3 = hard)");
+                    Console.WriteLine("Choose a difficulty level (1 = easy, 2 = medium, 3 = hard)");
                     diffLevel = int.Parse(Console.ReadLine());
                 }
                 catch (Exception)
