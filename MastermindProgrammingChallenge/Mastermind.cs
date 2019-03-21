@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace MastermindProgrammingChallenge
 {
+
+    
+
     class Mastermind
     {
+        // Colour Enumerration
+        private enum Colour {red,green,blue,yellow};
+
         // For console interaction and testing.
         public static string GetPlayerName()
         {
