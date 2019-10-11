@@ -79,7 +79,8 @@ namespace MastermindProgrammingChallenge
             int[] randomNum = new int[Size];
             Random rnd = new Random();
 
-            Console.WriteLine("PC Number : ");
+            // For Testing
+            // Console.WriteLine("PC Number : ");
             for (int i = 0; i < randomNum.Length; i++)
             {
                 eachNumber = rnd.Next(1, 5);
