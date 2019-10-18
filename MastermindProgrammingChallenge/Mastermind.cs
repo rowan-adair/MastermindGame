@@ -29,9 +29,9 @@ namespace MastermindProgrammingChallenge
             int difficulty = GetDifficulty();
             int numberCount = GetRandomNumber();
             bool won = false;
-            Console.Write(numberCount + " it is. Let's play.\n");   
+            Console.Write("Let's play.\n");   
             int[] PCArray = RandomNumberArrayGeneration(numberCount);
-            Console.WriteLine("A {0}-digit number has been chosen. Each possible digit may be the number 1 to 4.\n", numberCount);
+            Console.WriteLine("A {0}-digit number has been chosen. Each possible digit may be the number 1 to 3.\n", numberCount);
             for (int allowedAttempts = difficulty * numberCount; allowedAttempts > 0 && !won; allowedAttempts--)
             {
                 Console.WriteLine("\nEnter your guess ({0} guesses remaining)", allowedAttempts);
@@ -63,6 +63,7 @@ namespace MastermindProgrammingChallenge
             {
                 try
                 {
+                    Console.WriteLine("How long will the number be? Choose a length between 1 and 4.");
                     number = int.Parse(Console.ReadLine());
                 }
                 catch (Exception)
@@ -85,9 +86,7 @@ namespace MastermindProgrammingChallenge
             {
                 eachNumber = rnd.Next(1, 5);
                 randomNum[i] = eachNumber;
-                Console.Write(eachNumber);
             }
-            Console.WriteLine();
             return randomNum;
         }
 
